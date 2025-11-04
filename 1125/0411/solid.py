@@ -162,7 +162,7 @@ class BirdUnit:
     def __init__(self):
         pass
 
-    def fly():
+    def fly(self):
         print("can fly")
         
 
@@ -174,7 +174,7 @@ class Tank(BirdUnit):
     def __init__(self):
         super().__init__()
 
-    def fly():
+    def fly(self):
         print("should not fly")
 
 
