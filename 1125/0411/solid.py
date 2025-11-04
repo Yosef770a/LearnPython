@@ -181,25 +181,31 @@ class Tank(BirdUnit):
 # This implementation breaks the Liskov principle because we are inheriting and overriding a method from the parent class whose meaning is completely different from our actual usage.
 
 #Liskov 2 (Correct implementation of the first part)
-class BirdUnit:
+class FlyingUnit:
     def __init__(self):
         pass
 
-    def fly():
+    def fly(self):
         print("can fly")
+
 
 class GroundUnit:
     def __init__(self):
         pass
 
-    def fly():
+    def notfly(self):
         print("should not fly")
 
-class Drone(BirdUnit):
+
+class Drone(FlyingUnit):
     def __init__(self):
-        super().__init__()
+        pass
 
 class Tank(GroundUnit):
     def __init__(self):
-        super().__init__()
+        pass
 
+drone = Drone()
+drone.fly()
+tank = Tank()
+tank.notfly()
